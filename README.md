@@ -10,20 +10,24 @@ _fingerpointer_ is a tiny jQuery plugin to provide a simple switch between touch
 ## Example
 
 Usually you would bind a mouse event like that:
-> $('a').on('click', myFunc);
 
-So far there are no problems since click also works perfectly fine on touch events. Imagine you want to have different event for the same function call on touch events.
-> var isTouch = !!('ontouchstart' in window) ? 1 : 0; 
->
-> if(isTouch) {
->	$('a').on('taphold', myFunc);
-> } else {
-> 	$('a').on('click', myFunc);
-> }
+	$('a').on('click', myFunc);
+
+So far there are no problems since click also works perfectly fine on touch events. Imagine you want to have different events for the same function call on touch devices.
+
+	var isTouch = !!('ontouchstart' in window) ? 1 : 0; 
+
+	if(isTouch) {
+		$('a').on('taphold', myFunc);
+	} else {
+		$('a').on('click', myFunc);
+	}
 
 Now the way you can achieve that with fingerpointer:
-> $('a').fipo('taphold', 'click', myFunc);
 
-Pretty easy, right? But if you have some event call exclusively for touch or pointer devices you can use this fancy functions:
-> $('a').finger('taphold', 'click', myFunc);
-> $('a').pointer('click', 'click', myFunc);
+	$('a').fipo('taphold', 'click', myFunc);
+
+Pretty easy, right? But if you have some event calls exclusively for touch or pointer devices you can use this fancy functions:
+
+	$('a').finger('taphold', 'click', myFunc);
+	$('a').pointer('click', 'click', myFunc);
