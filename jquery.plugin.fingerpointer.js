@@ -5,7 +5,7 @@
  * http://github.com/dantipa/jquery.fingerpointer
  */
 (function( $ ){
-    var isTouch = !!('ontouchstart' in window) ? 1 : 0;
+    var isTouch = 'ontouchstart' in window;
 
     /**
      *

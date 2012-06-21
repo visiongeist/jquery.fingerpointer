@@ -15,9 +15,9 @@ Usually you would bind a mouse event like that:
 
 So far there are no problems since click also works perfectly fine on touch events. Imagine you want to have different events for the same function call on touch devices.
 
-	var isTouch = !!('ontouchstart' in window) ? 1 : 0; 
+	var isTouch = 'ontouchstart' in window; 
 
-	if(isTouch) {
+	if (isTouch) {
 		$('a').on('taphold', myFunc);
 	} else {
 		$('a').on('click', myFunc);
@@ -29,11 +29,10 @@ Now the way you can achieve that with fingerpointer:
 
 Pretty easy, right? But if you have some event calls exclusively for touch or pointer devices you can use this fancy functions:
 
-	$('a').finger('taphold', myFunc);
-	$('a').pointer('click', myFunc2);
+	$('a').finger('taphold', 'click', myFunc);
+	$('a').pointer('click', 'click', myFunc2);
 	
 Or just chain them
 
-	$('a').finger('taphold', myFunc)
-		.pointer('click', myFunc2);
-	
+	$('a').finger('taphold', 'click', myFunc)
+		.pointer('click', 'click', myFunc2);
