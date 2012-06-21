@@ -15,7 +15,7 @@ Usually you would bind a mouse event like that:
 
 So far there are no problems since click also works perfectly fine on touch events. Imagine you want to have different events for the same function call on touch devices.
 
-	var isTouch = !!('ontouchstart' in window) ? 1 : 0; 
+	var isTouch = 'ontouchstart' in window; 
 
 	if(isTouch) {
 		$('a').on('taphold', myFunc);
