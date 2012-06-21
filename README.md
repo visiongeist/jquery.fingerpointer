@@ -36,4 +36,3 @@ Or just chain them
 
 	$('a').finger('taphold', 'click', myFunc)
 		.pointer('click', 'click', myFunc2);
-	
