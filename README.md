@@ -34,6 +34,6 @@ Pretty easy, right? But if you have some event calls exclusively for touch or po
 	
 Or just chain them
 
-	$('a').finger('taphold', 'click', myFunc)
-		.pointer('click', 'click', myFunc2);
+	$('a').finger('taphold', myFunc)
+		.pointer('click', myFunc2);
 	
