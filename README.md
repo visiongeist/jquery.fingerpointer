@@ -29,10 +29,10 @@ Now the way you can achieve that with fingerpointer:
 
 Pretty easy, right? But if you have some event calls exclusively for touch or pointer devices you can use this fancy functions:
 
-	$('a').finger('taphold', 'click', myFunc);
-	$('a').pointer('click', 'click', myFunc2);
+	$('a').finger('taphold', myFunc);
+	$('a').pointer('click', myFunc2);
 	
 Or just chain them
 
-	$('a').finger('taphold', 'click', myFunc)
-		.pointer('click', 'click', myFunc2);
+	$('a').finger('taphold', myFunc)
+		.pointer('click', myFunc2);
