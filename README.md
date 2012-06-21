@@ -17,7 +17,7 @@ So far there are no problems since click also works perfectly fine on touch even
 
 	var isTouch = 'ontouchstart' in window; 
 
-	if(isTouch) {
+	if (isTouch) {
 		$('a').on('taphold', myFunc);
 	} else {
 		$('a').on('click', myFunc);
