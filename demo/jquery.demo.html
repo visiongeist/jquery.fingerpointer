@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery fingerpointer plugin demo</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.plugin.fingerpointer.js"></script>
+	<style>
+		div {
+			border: 3px dashed black;
+			font-size: 5em;
+			height: 200px;
+			line-height: 200px;
+			margin-bottom: 10px;
+			text-align: center;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div id="finger">only finger!</div>
+	<div id="pointer">only pointer!</div>
+	<div id="fipo">fipo!</div>
+	<script>
+		(function ( $ ) {
+			var highlight = function() {
+				$(this).css('background-color', '#' + (Math.random() * 0xFFFFFF << 0).toString(16));
+			};
+		
+			$('#fipo').fipo('touchstart', 'click', highlight);
+			$('#finger').finger('touchstart', highlight);
+			$('#pointer').pointer('click', highlight);
+		}( jQuery ));
+	</script>
+</body>
+</html>
