@@ -18,21 +18,21 @@ So far there are no problems since click also works perfectly fine on touch even
 	var isTouch = 'ontouchstart' in window; 
 
 	if (isTouch) {
-		$('a').on('taphold', myFunc);
+		$('a').on('touchstart', myFunc);
 	} else {
 		$('a').on('click', myFunc);
 	}
 
 Now the way you can achieve that with fingerpointer:
 
-	$('a').fipo('taphold', 'click', myFunc);
+	$('a').fipo('touchstart', 'click', myFunc);
 
 Pretty easy, right? But if you have some event calls exclusively for touch or pointer devices you can use this fancy functions:
 
-	$('a').finger('taphold', myFunc);
+	$('a').finger('touchstart', myFunc);
 	$('a').pointer('click', myFunc2);
 	
 Or just chain them
 
-	$('a').finger('taphold', myFunc)
+	$('a').finger('touchstart', myFunc)
 		.pointer('click', myFunc2);
