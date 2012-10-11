@@ -1,6 +1,6 @@
 /*
  * Fingerpointer jQuery plugin
- * version 0.5
+ * version 1.0
  * author: Damien Antipa
  * http://github.com/dantipa/jquery.fingerpointer
  */
